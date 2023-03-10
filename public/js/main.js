@@ -28,10 +28,10 @@ function generateAkanName(indexOfDay, gender) {
 }
 
 function main() {
-  let { dd, mm, cc, yy, gender } = userInfo();
-  let indexOfDay = dayCalculationIndex(dd, mm, cc, yy);
-  generateAkanName(indexOfDay, gender);
-  console.log("Your akan name is: " + akanName);
-}
-
-main();
+    let { dd, mm, cc, yy, gender } = userInfo();
+    let indexOfDay = dayCalculationIndex(dd, mm, cc, yy);
+    generateAkanName(indexOfDay, gender);
+    document.getElementById("output").innerHTML = "Your akan name is: " + akanName;
+  }
+  
+  main();
