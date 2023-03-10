@@ -3,12 +3,12 @@ const femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 let akanName = null;
 
 function userInfo() {
-  let dateOfBirth = prompt("Please enter your date of birth in the format DD/MM/YYYY: ");
+  let dateOfBirth = document.getElementById("dob").value;
   let dd = parseInt(dateOfBirth.slice(0, 2));
   let mm = parseInt(dateOfBirth.slice(3, 5));
   let cc = parseInt(dateOfBirth.slice(6, 8));
   let yy = parseInt(dateOfBirth.slice(8));
-  let gender = prompt("Enter your gender (male/female): ");
+  let gender = document.getElementById("gender").value;
   return { dd, mm, cc, yy, gender };
 }
 
@@ -17,7 +17,9 @@ function dayCalculationIndex(dd, mm, cc, yy) {
   return indexOfDay;
 }
 
-function generateAkanName(indexOfDay, gender) {
+function generateAkanName() {
+  let { dd, mm, cc, yy, gender } = userInfo();
+  let indexOfDay = dayCalculationIndex(dd, mm, cc, yy);
   if (gender === "male") {
     akanName = maleNames[indexOfDay];
   } else if (gender === "female") {
@@ -25,13 +27,5 @@ function generateAkanName(indexOfDay, gender) {
   } else {
     console.log("Gender not known! Please retry with male/female");
   }
+  document.getElementById("output").innerHTML = "Your Akan name is: " + akanName;
 }
-
-function main() {
-    let { dd, mm, cc, yy, gender } = userInfo();
-    let indexOfDay = dayCalculationIndex(dd, mm, cc, yy);
-    generateAkanName(indexOfDay, gender);
-    document.getElementById("output").innerHTML = "Your akan name is: " + akanName;
-  }
-  
-  main();
