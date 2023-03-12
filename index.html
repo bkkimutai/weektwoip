@@ -1,62 +1,37 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Bootstrap Practice</title>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-  </head>
-  
-  <body>
-    <div class="container">
-      <div class="row">
-      <div class="col-md-6">
-      <div class="p-5 mb-4 mt-4 bg-light rounded-3">
-        <h1>Bootstrap Practice</h1>
-        <p>Sed finibus sapien luctus pretium interdum. Etiam accumsan nibh neque. Integer congue magna orci, vitae suscipit mi tincidunt quis. Suspendisse fringilla, orci eu aliquet ultricies, libero ipsum maximus massa, et mollis leo massa sed felis. Suspendisse molestie elit non mollis gravida.</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Akan Name Generator</title>
+    <script src="./public/js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="./public/css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+</head>
+</body>
+	
+<body>
+  <div class="container mt-5">
+      <h1 class="text-center">Akan Name Generator</h1>
+      <div class="row justify-content-center mt-4">
+          <div class="col-md-6">
+              <form>
+                  <div class="form-group">
+                      <label for="dob">Date of Birth (DD/MM/YYYY):</label>
+                      <input type="text" class="form-control" id="dob">
+                  </div>
+                  <div class="form-group">
+                      <label for="gender">Gender:</label>
+                      <select class="form-control" id="gender">
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                      </select>
+                  </div>
+                  <button type="button" class="btn btn-primary btn-block" onclick="generateAkanName()">Generate Akan Name</button>
+              </form>
+              <div id="output" class="text-center mt-4"></div>
+          </div>
       </div>
-      </div>
-      <div class="col-md-6">
-      <div class="p-5 mb-4 mt-4 bg-light rounded-3">
-      <h2>Lorem Ipsum</h2>
-      <ul>
-        <li>Lorem ipsum dolor sit amet</li>
-        <li>Consectetur adipiscing elit</li>
-        <li>Integer finibus</li>
-        <li>Nisl tempus semper semper</li>
-        <li>Purus nisl hendrerit tellus</li>
-      </ul>
-      </div>
-      </div>
-      </div>
-      <div class="row">
-      <div class="col-md-6">
-      <h2>Et Consequat Magna</h2>
-      <ul>
-        <li>Orci ut velit</li>
-        <li>Pellentesque cursus justo</li>
-        <li>In felis condimentum cursus</li>
-      </ul>
-      <ul>
-        <li>Proin dignissim lectus enim</li>
-        <li>Eu bibendum mauris euismod in</li>
-        <li>Morbi dictum</li>
-      <li>Ex et malesuada pellentesque</li>
-      </ul>
-    </div>
-    <div class="col-md-6">
-      <h2>Morbi Lacinia Mollis Tortor</h2>
-      <ul>
-      <li>A sodales elit tempor ut</li>
-      <li>Ut elit augue</li>
-      <li>Imperdiet eu est faucibus</li>
-      <li>Tristique hendrerit mi</li>
-      <li>Proin in ex lectus</li>
-      <li>Donec accumsan in nisi non ultricies</li>
-      </ul>
-      </div>
-    </div>
+  </div>
+</body>
 
-    </div>
-  </body>
 </html>
-  
